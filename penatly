@@ -1,0 +1,29 @@
+
+package penalty;
+
+import java.util.Scanner;
+
+public class Penalty {
+    
+    public static void main(String[] args) {
+       Scanner in = new Scanner(System.in);  
+       System.out.println("Введите ограничение скорости");
+       int v_max = in.nextInt(); // задано ограничение скорости
+       System.out.println("Введите скорость автомобиля");
+       int v = in.nextInt(); // задана скорость нарушителя
+
+       if ( v <= v_max) { //расчет размера штрафа 
+           System.out.println("Все по правилам!");
+       } else if (v <= v_max + 20) {
+           System.out.println("не штрафуется");
+       } else if (v <= v_max + 40) {
+           System.out.println("Штраф в размере 500р.");
+       } else if (v <= v_max + 60) {
+           System.out.println("Штраф в размере 1000-1500р.");
+       } else if (v <= v_max + 80) {
+           System.out.println("Штраф в размере 2000-2500 р.");
+       } else {
+           System.out.println("Штраф в размере 5000р.");
+       }
+    } 
+}
